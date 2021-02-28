@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float _playerSpeed = 10f;
 
+    public float _playerHealth = 20f;
+
     public GunController gun;
 
     private void Update()
