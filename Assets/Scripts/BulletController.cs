@@ -19,4 +19,5 @@ public class BulletController : MonoBehaviour
     {
         Destroy(this);
     }
+
 }
