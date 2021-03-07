@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     //public float _playerHealth = 20f;
 
     public float _playerScore = 0;
-
+    
     public GunController gun;
 
     private void Update()

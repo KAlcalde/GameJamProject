@@ -23,7 +23,7 @@ public class ObjectPool : MonoBehaviour
     {
         pooledObjects = new List<GameObject>();
         GameObject tmp;
-        Debug.Log("(Start) amountToPool = " + amountToPool);
+        //Debug.Log("(Start) amountToPool = " + amountToPool);
         for (int i = 0; i < amountToPool; i++)
         {
             tmp = Instantiate(objectToPool);

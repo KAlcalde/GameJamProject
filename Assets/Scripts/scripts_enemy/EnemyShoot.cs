@@ -17,7 +17,6 @@ public class EnemyShoot : MonoBehaviour
     Vector3 pointerPos; //enemyPointer position
 
     GameObject bullet; //bullet
-    public float bulletSpeed = 10f; //speed of bullet
 
     public float startDelay = 1.2f; //time between enemy spawning and enemy shooting
     public float shootInterval = 1.2f; //time between shots

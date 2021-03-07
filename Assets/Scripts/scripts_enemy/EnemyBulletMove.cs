@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBulletMove : MonoBehaviour
 {
-    public float bulletSpeed = 5f;
+    public float bulletSpeed;
     // Start is called before the first frame update
     void Start()
     {

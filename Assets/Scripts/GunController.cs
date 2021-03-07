@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     public bool isFiring;
-
+    
     public BulletController bullet;
     [SerializeField] private float _bulletSpeed;
 

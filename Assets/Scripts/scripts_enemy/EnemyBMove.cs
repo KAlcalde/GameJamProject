@@ -14,16 +14,25 @@ public class EnemyBMove : MonoBehaviour
      */
 
     public float speed = 5f;
+    public float startDelay = 3f;
+    public float turnInterval = 1.75f;
     Quaternion startOrientation;
+    Quaternion newDirection;
     // Start is called before the first frame update
     void Awake()
     {
         startOrientation = Quaternion.Euler(0,Random.Range(-60f, 60f),0);
+        InvokeRepeating("changeDirection", startDelay, turnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    }
+
+    void changeDirection()
+    {
+        newDirection = Quaternion.Euler(0, Random.Range(-90f, 90f), 0);
     }
 }

@@ -23,7 +23,7 @@ public class GunRotation : MonoBehaviour
         if(groundPlane.Raycast(camRay, out rayLength))
         {
             Vector3 pointToLook = camRay.GetPoint(rayLength);
-
+            //aldkjhadlfhlfkjghldkjhgflh
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
     }
