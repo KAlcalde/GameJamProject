@@ -5,15 +5,13 @@
       <File FileName="Assets/Scripts/scripts_enemy/EnemyHit.cs" />
       <File FileName="Assets/Scripts/HealthUI.cs" />
       <File FileName="Assets/Scripts/PlayerHit.cs" />
-      <File FileName="Assets/Scripts/GunController.cs" />
+      <File FileName="Assets/Scripts/GunController.cs" Line="8" Column="5" />
       <File FileName="Assets/Scripts/ScoreUI.cs" />
       <File FileName="Assets/Scripts/OutOfBoundsDestroy.cs" />
-      <File FileName="Assets/Scripts/BulletController.cs" Line="17" Column="5" />
-      <File FileName="Assets/Scripts/GunRotation.cs" Line="26" Column="41" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyAMove.cs" Line="24" Column="9" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyBMove.cs" Line="34" Column="5" />
-      <File FileName="Assets/Scripts/ObjectPool.cs" Line="29" Column="35" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyBulletMove.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/GunRotation.cs" />
+      <File FileName="Assets/Scripts/scripts_enemy/EnemyBMove.cs" />
+      <File FileName="Assets/Scripts/ObjectPool.cs" />
+      <File FileName="Assets/Scripts/scripts_enemy/EnemyBulletMove.cs" />
       <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -33,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1322b578-93ca-47a3-aeaa-d7b339e3d281" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="581196e9-54af-4e67-95b0-6c751d593b65" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
