@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * playerBulletSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * playerBulletSpeed * Time.deltaTime);
 
     }
     

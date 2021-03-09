@@ -43,7 +43,6 @@ public class EnemyShoot : MonoBehaviour
             {
                 bullet.transform.position = pointerPos; //sets bullet position to position of enemy pointer
                 bullet.transform.rotation = enemyPointer.transform.rotation;
-                bullet.transform.Rotate(90, 0, 0);
                 bullet.SetActive(true); //spawns a bullet from the pool
             }
         }

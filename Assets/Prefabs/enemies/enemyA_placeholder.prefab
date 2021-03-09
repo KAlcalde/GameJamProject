@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7265906633485774577}
   - component: {fileID: 9002267769521994003}
   - component: {fileID: 1020255561876448346}
+  - component: {fileID: 800318410}
   m_Layer: 0
   m_Name: enemyA_placeholder
   m_TagString: enemy
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62b3e49e5b374109928332768be9e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3.57
 --- !u!114 &1020255561876448346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +124,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDelay: 1.2
   shootInterval: 1.2
+--- !u!114 &800318410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616963185763622780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33538d598d43445b9bfd3789fb2efdec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 1
 --- !u!1001 &455173642689839489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,12 +167,12 @@ PrefabInstance:
     - target: {fileID: 8472411155666547838, guid: 73cad8d01622d42c58ad34f142085b31,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8472411155666547838, guid: 73cad8d01622d42c58ad34f142085b31,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8472411155666547838, guid: 73cad8d01622d42c58ad34f142085b31,
         type: 3}
@@ -173,7 +187,7 @@ PrefabInstance:
     - target: {fileID: 8472411155666547838, guid: 73cad8d01622d42c58ad34f142085b31,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8472411155666547838, guid: 73cad8d01622d42c58ad34f142085b31,
         type: 3}

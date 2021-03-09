@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{A158C06A-1DAA-FDF1-BE3D-9277D32F10A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BulletController.cs">
     <Files>
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyShoot.cs" Line="19" Column="32" />
+      <File FileName="Assets/Scripts/scripts_enemy/EnemyShoot.cs" Line="46" Column="51" />
       <File FileName="Assets/Scripts/scripts_enemy/EnemyHit.cs" />
       <File FileName="Assets/Scripts/HealthUI.cs" />
-      <File FileName="Assets/Scripts/PlayerHit.cs" />
-      <File FileName="Assets/Scripts/GunController.cs" Line="8" Column="5" />
+      <File FileName="Assets/Scripts/PlayerHit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GunController.cs" Line="29" Column="140" />
       <File FileName="Assets/Scripts/ScoreUI.cs" />
       <File FileName="Assets/Scripts/OutOfBoundsDestroy.cs" />
-      <File FileName="Assets/Scripts/GunRotation.cs" />
+      <File FileName="Assets/Scripts/GunRotation.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/scripts_enemy/EnemyBMove.cs" />
       <File FileName="Assets/Scripts/ObjectPool.cs" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyBulletMove.cs" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/scripts_enemy/EnemyBulletMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BulletController.cs" Line="14" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +21,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="scripts_enemy" expanded="True" />
-                <Node name="PlayerMovement.cs" selected="True" />
+                <Node name="BulletController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -31,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="581196e9-54af-4e67-95b0-6c751d593b65" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bee3fd47-8eb7-4a8b-85f6-1a743c5fa943" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
