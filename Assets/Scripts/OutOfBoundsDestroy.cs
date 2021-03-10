@@ -19,11 +19,7 @@ public class OutOfBoundsDestroy : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Player")
-        {
-
-        }
-        else
+        if(other.gameObject.tag != "Player")
         {
             other.gameObject.SetActive(false);
         }

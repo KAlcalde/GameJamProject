@@ -10,18 +10,20 @@ public class EnemyBMove : MonoBehaviour
     /* 
      * Notes:
      * spawn these from the sides of the play area
-     * spawns at a random angle within a set range and moves forward until it leaves the play area
+     * spawns at a random angle within a set range and moves forward
+     * randomly changes directions at set intervals
      */
 
     public float speed = 5f;
     public float startDelay = 3f;
     public float turnInterval = 1.75f;
     Quaternion startOrientation;
-    Quaternion newDirection;
+    Quaternion newOrientation;
     // Start is called before the first frame update
     void Awake()
     {
         startOrientation = Quaternion.Euler(0,Random.Range(-60f, 60f),0);
+        transform.rotation = startOrientation;
         InvokeRepeating("changeDirection", startDelay, turnInterval);
     }
 
@@ -33,6 +35,7 @@ public class EnemyBMove : MonoBehaviour
 
     void changeDirection()
     {
-        newDirection = Quaternion.Euler(0, Random.Range(-90f, 90f), 0);
+        newOrientation = Quaternion.Euler(0, Random.Range(-180f, 180f), 0);
+        transform.rotation = newOrientation;
     }
 }

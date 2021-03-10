@@ -6,7 +6,7 @@ public class EnemyAMove : MonoBehaviour
 {
     /*
      * Notes:
-     * moves in a straight line and stops when it reaches a set point
+     * moves in a straight line
      */
 
     public float speed = 5f;
