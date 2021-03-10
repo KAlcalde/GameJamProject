@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{A158C06A-1DAA-FDF1-BE3D-9277D32F10A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/scripts_enemy/EnemyHit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/scripts_menus/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/scripts_menus/MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyHit.cs" Line="30" Column="46" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemyRespawn.cs" Line="7" Column="5" />
+      <File FileName="Assets/Scripts/scripts_menus/MainMenu.cs" Line="10" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,10 +9,9 @@
           <Node name="Game Jam Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="scripts_enemy" expanded="True">
-                  <Node name="EnemyHit.cs" selected="True" />
+                <Node name="scripts_menus" expanded="True">
+                  <Node name="MainMenu.cs" selected="True" />
                 </Node>
-                <Node name="scripts_menus" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -24,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="89c5ab6c-6651-440b-8633-3ebf37c6542c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c74b7f09-c847-46e7-ac00-a339686d0f4a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
