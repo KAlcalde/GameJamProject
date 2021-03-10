@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyHit : MonoBehaviour
 {
     public int enemyHealth = 1;
+    public GameObject EnemyRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        EnemyRespawn = GameObject.Find("EnemyRespawn");
     }
 
     // Update is called once per frame
