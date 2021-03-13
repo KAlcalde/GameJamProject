@@ -35,7 +35,7 @@ public class EnemyBMove : MonoBehaviour
 
     void changeDirection()
     {
-        newOrientation = Quaternion.Euler(0, Random.Range(-180f, 180f), 0);
+        newOrientation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
         transform.rotation = newOrientation;
     }
 }

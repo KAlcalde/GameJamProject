@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHit : MonoBehaviour
 {
-    public float _playerHealth = 20f;
+    public int _playerHealth = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +16,15 @@ public class PlayerHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("player health = " + _playerHealth);
+        //Debug.Log("player health = " + _playerHealth);
         if (_playerHealth <= 0)
         {
             //game over
             Debug.Log("game over");
+            SceneManager.LoadScene("GameOverMenu");
+            //FindObjectOfType<MainMenu>().GameOver();
+            //GameObject.Find("MainMenu").SetActive(false);
+            //GameObject.Find("GameOverMenu").SetActive(true);
         }
     }
 
@@ -30,11 +35,5 @@ public class PlayerHit : MonoBehaviour
             _playerHealth--;
             other.gameObject.SetActive(false);
         }
-        //if (_playerHealth <= 0)
-        //{
-        //    //game over
-        //    Debug.Log("player health = 0");
-        //    //player.SetActive(false);
-        //}
     }
 }
