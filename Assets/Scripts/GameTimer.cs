@@ -19,6 +19,7 @@ public class GameTimer : MonoBehaviour
     {
         timeText = GetComponent<TextMeshProUGUI>();
         isRunning = true;
+        timeRemaining = GameObject.Find("GameManager").GetComponent<GameManage>().timeRemaining;
     }
 
     void Update()
@@ -34,9 +35,6 @@ public class GameTimer : MonoBehaviour
                 timeRemaining = 0;
                 isRunning = false;
                 SceneManager.LoadScene("GameOverMenu");
-                //FindObjectOfType<MainMenu>().GameOver();
-                //GameObject.Find("MainMenu").SetActive(false);
-                //GameObject.Find("GameOverMenu").SetActive(true);
             }
         }
     }

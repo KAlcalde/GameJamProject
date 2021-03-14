@@ -11,14 +11,17 @@ public class ScoreUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("GameManager");
+        Debug.Log("player = " + player);
         ScoreK = GetComponent<TextMeshProUGUI>();
-        ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        //ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        ScoreK.text = "Score: " + player.GetComponent<GameManage>()._playerScore.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        //ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        ScoreK.text = "Score: " + player.GetComponent<GameManage>()._playerScore.ToString();
     }
 }

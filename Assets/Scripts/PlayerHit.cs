@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHit : MonoBehaviour
 {
-    public int _playerHealth = 20;
+    public int _playerHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -16,15 +16,13 @@ public class PlayerHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _playerHealth = GameObject.Find("GameManager").GetComponent<GameManage>()._playerHealth;
         //Debug.Log("player health = " + _playerHealth);
         if (_playerHealth <= 0)
         {
             //game over
             Debug.Log("game over");
             SceneManager.LoadScene("GameOverMenu");
-            //FindObjectOfType<MainMenu>().GameOver();
-            //GameObject.Find("MainMenu").SetActive(false);
-            //GameObject.Find("GameOverMenu").SetActive(true);
         }
     }
 
