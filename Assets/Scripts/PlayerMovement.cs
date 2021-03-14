@@ -31,5 +31,13 @@ public class PlayerMovement : MonoBehaviour
         {
             gun.isFiring = false;
         }
+
+    }
+
+
+    public void AddScore(float amount)
+    {
+        _playerScore += amount;
+        Debug.Log(_playerScore);
     }
 }
