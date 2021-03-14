@@ -26,9 +26,7 @@ public class OutOfBoundsDestroy : MonoBehaviour
         {
             other.transform.rotation *= Quaternion.Euler(0, 180f, 0);
         }
-        else if(other.gameObject.tag == "Player")
-        { }
-        else
+        else if(other.gameObject.tag == "enemyBullet")
         {
             other.gameObject.SetActive(false);
         }
