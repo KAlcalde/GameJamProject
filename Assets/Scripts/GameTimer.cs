@@ -17,7 +17,7 @@ public class GameTimer : MonoBehaviour
 
     private void Start()
     {
-        timeText = GetComponent<TextMeshProUGUI>();
+        timeText = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
         isRunning = true;
         timeRemaining = GameObject.Find("GameManager").GetComponent<GameManage>().timeRemaining;
     }
@@ -29,9 +29,11 @@ public class GameTimer : MonoBehaviour
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
             }
             else
             {
+                Debug.Log("time's up");
                 timeRemaining = 0;
                 isRunning = false;
                 SceneManager.LoadScene("GameOverMenu");

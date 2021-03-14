@@ -9,15 +9,18 @@ public class GameOverMenu : MonoBehaviour
     //code used:
     //https://youtu.be/VbZ9_C4-Qbo
     bool gameEnd = false;
+    float initialTime;
 
     void Start()
     {
         gameEnd = FindObjectOfType<GameManage>().gameEnd;
+        initialTime = FindObjectOfType<GameManage>().timeRemaining;
     }
 
     void Update()
     {
-        if(gameEnd)
+        gameEnd = FindObjectOfType<GameManage>().gameEnd;
+        if (gameEnd)
         {
             GameOver();
         }
@@ -25,7 +28,6 @@ public class GameOverMenu : MonoBehaviour
 
     public void GameOver()
     {
-        gameEnd = false;
         TextMeshProUGUI gameOverText = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
         //load game over screen
@@ -50,5 +52,6 @@ public class GameOverMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("SampleScene");
+        FindObjectOfType<GameManage>().timeRemaining = initialTime;
     }
 }

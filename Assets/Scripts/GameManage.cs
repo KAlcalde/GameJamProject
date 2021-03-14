@@ -8,6 +8,7 @@ public class GameManage : MonoBehaviour
     public int _playerHealth;
     public float timeRemaining;
     public bool gameEnd;
+    //public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +20,16 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameEnd)
-        {
-            _playerHealth = FindObjectOfType<PlayerHit>()._playerHealth;
-            timeRemaining = FindObjectOfType<GameTimer>().timeRemaining;
-        }
-        if(_playerHealth <= 0 || timeRemaining <= 0)
+        if (_playerHealth <= 0 || timeRemaining <= 0)
         {
             gameEnd = true;
+        }
+        else
+        {
+            //player = GameObject.Find("Player");
+            //Debug.Log("player =  " + player);
+            //_playerHealth = GameObject.Find("Player").GetComponent<PlayerHit>()._playerHealth;
+            timeRemaining = GameObject.Find("Timer").GetComponent<GameTimer>().timeRemaining;
         }
     }
 }

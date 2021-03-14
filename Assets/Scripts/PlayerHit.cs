@@ -30,7 +30,9 @@ public class PlayerHit : MonoBehaviour
     {
         if(other.gameObject.tag == "enemyBullet")
         {
-            _playerHealth--;
+            GameObject.Find("GameManager").GetComponent<GameManage>()._playerHealth--;
+            Debug.Log("hit");
+            Debug.Log("health: " + _playerHealth);
             other.gameObject.SetActive(false);
         }
     }

@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0f, vertical);
 
         transform.position += movement * Time.deltaTime * _playerSpeed * -1;
-
         if (Input.GetMouseButtonDown(0))
         {
             gun.isFiring = true;
