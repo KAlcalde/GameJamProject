@@ -7,12 +7,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float _playerSpeed = 10f;
 
-    //public float _playerHealth = 20f;
-
-    public float _playerScore = 0;
+    public float _playerScore;
+    public GameManage gameManager;
     
     public GunController gun;
 
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManage>();
+        _playerScore = gameManager._playerScore;
+        Debug.Log("gameManager (PlayerMovement) = " + gameManager.gameObject);
+    }
     private void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");

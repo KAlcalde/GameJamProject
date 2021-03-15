@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHit : MonoBehaviour
 {
-    public int _playerHealth = 20;
+    public int _playerHealth;
+    public GameManage gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManage>();
+        _playerHealth = gameManager._playerHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("player health = " + _playerHealth);
+        Debug.Log("player health = " + _playerHealth);
         if (_playerHealth <= 0)
         {
             //game over
@@ -33,6 +35,7 @@ public class PlayerHit : MonoBehaviour
         if(other.gameObject.tag == "enemyBullet")
         {
             _playerHealth--;
+            Debug.Log("hit");
             other.gameObject.SetActive(false);
         }
     }

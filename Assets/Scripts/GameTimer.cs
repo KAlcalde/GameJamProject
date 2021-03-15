@@ -17,8 +17,9 @@ public class GameTimer : MonoBehaviour
 
     private void Start()
     {
-        timeText = GetComponent<TextMeshProUGUI>();
+        timeText = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
         isRunning = true;
+        timeRemaining = GameObject.Find("GameManager").GetComponent<GameManage>().timeRemaining;
     }
 
     void Update()
@@ -27,26 +28,25 @@ public class GameTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
+                DisplayTime(timeRemaining);
                 timeRemaining -= Time.deltaTime;
             }
             else
             {
+                Debug.Log("time's up");
                 timeRemaining = 0;
                 isRunning = false;
                 SceneManager.LoadScene("GameOverMenu");
-                //FindObjectOfType<MainMenu>().GameOver();
-                //GameObject.Find("MainMenu").SetActive(false);
-                //GameObject.Find("GameOverMenu").SetActive(true);
             }
         }
     }
 
     void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay += 1;
+        timeToDisplay += 1f;
 
         float minutes = Mathf.FloorToInt(timeRemaining / 60);
-        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+        float seconds = Mathf.FloorToInt((timeRemaining % 60)+1);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }

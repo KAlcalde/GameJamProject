@@ -6,19 +6,19 @@ using TMPro;
 
 public class ScoreUI : MonoBehaviour
 {
-    public GameObject player;
+    public GameManage gameManager;
     private TextMeshProUGUI ScoreK;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        gameManager = FindObjectOfType<GameManage>();
         ScoreK = GetComponent<TextMeshProUGUI>();
-        ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        ScoreK.text = "Score: " + gameManager._playerScore.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ScoreK.text = "Score: " + player.GetComponent<PlayerMovement>()._playerScore.ToString();
+        ScoreK.text = "Score: " + gameManager._playerScore.ToString();
     }
 }

@@ -6,35 +6,67 @@ using TMPro;
 
 public class GameOverMenu : MonoBehaviour
 {
-    public void GameOver()
+    //code used:
+    //https://youtu.be/VbZ9_C4-Qbo
+    GameObject gameManager;
+    private GameManage gameManageScript;
+    bool gameEnd = false;
+
+    void Start()
     {
-        bool gameEnd = false;
-        TextMeshProUGUI gameOverText = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
-        if (!gameEnd)
+        gameManager = GameObject.Find("GameManager");
+        gameManageScript = gameManager.GetComponent<GameManage>();
+        gameEnd = gameManageScript.gameEnd;
+    }
+
+    void Update()
+    {
+        gameEnd = gameManageScript.gameEnd;
+        Debug.Log("gameEnd (GameOverMenu) = " + gameEnd);
+        if (gameEnd)
         {
-            gameEnd = true;
-            //load game over screen
-            //SceneManager.LoadScene("MainMenu");
-            //GameObject.Find("MainMenu").SetActive(false);
-            //GameObject.Find("GameOverMenu").SetActive(true);
-            if (FindObjectOfType<PlayerHit>()._playerHealth <= 0)
-            {
-                gameOverText.text = "GAME OVER";
-            }
-            else if (!FindObjectOfType<GameTimer>().isRunning)
-            {
-                gameOverText.text = "TIME'S UP";
-            }
-            scoreText.text = "Score: " + GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>()._playerScore;
+            Debug.Log("game over");
+            GameOver();
         }
     }
+
+    public void GameOver()
+    {
+        TextMeshProUGUI gameOverText = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        //load game over screen
+        if (gameManageScript._playerHealth <= 0)
+        {
+            Debug.Log(gameManageScript._playerHealth);
+            gameOverText.text = "GAME OVER";
+        }
+        else if (gameManageScript.timeRemaining <= 0)
+        {
+            Debug.Log("out of time");
+            gameOverText.text = "TIME'S UP";
+        }
+        scoreText.text = "Score: " + gameManageScript._playerScore.ToString();
+        Debug.Log("Score: " + gameManageScript._playerScore.ToString());
+    }
+
     public void backToMain()
     {
-        SceneManager.LoadScene("MainMenu");
+        ResetGame();
+        SceneManager.LoadScene("StartMenu");
     }
+
     public void Restart()
     {
+        ResetGame();
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void ResetGame()
+    {
+        gameEnd = false;
+        gameManageScript.timeRemaining = gameManageScript.initialTime;
+        gameManageScript._playerHealth = gameManageScript.initialHealth;
+        gameManageScript._playerScore = 0;
+        Destroy(gameManager);
     }
 }

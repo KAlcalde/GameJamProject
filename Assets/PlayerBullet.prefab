@@ -124,4 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde613b15b295f04bb5de72bcb7abfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBulletSpeed: 5
+  playerBulletSpeed: 40
+  playerIncrease: {fileID: 0}
+  playerObject: {fileID: 0}
