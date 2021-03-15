@@ -28,8 +28,8 @@ public class GameTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                timeRemaining -= Time.deltaTime;
             }
             else
             {
@@ -43,10 +43,10 @@ public class GameTimer : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay += 1;
+        timeToDisplay += 1f;
 
         float minutes = Mathf.FloorToInt(timeRemaining / 60);
-        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+        float seconds = Mathf.FloorToInt((timeRemaining % 60)+1);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }

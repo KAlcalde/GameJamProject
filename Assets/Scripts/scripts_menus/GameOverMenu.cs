@@ -8,20 +8,24 @@ public class GameOverMenu : MonoBehaviour
 {
     //code used:
     //https://youtu.be/VbZ9_C4-Qbo
+    GameObject gameManager;
+    private GameManage gameManageScript;
     bool gameEnd = false;
-    float initialTime;
 
     void Start()
     {
-        gameEnd = FindObjectOfType<GameManage>().gameEnd;
-        initialTime = FindObjectOfType<GameManage>().timeRemaining;
+        gameManager = GameObject.Find("GameManager");
+        gameManageScript = gameManager.GetComponent<GameManage>();
+        gameEnd = gameManageScript.gameEnd;
     }
 
     void Update()
     {
-        gameEnd = FindObjectOfType<GameManage>().gameEnd;
+        gameEnd = gameManageScript.gameEnd;
+        Debug.Log("gameEnd (GameOverMenu) = " + gameEnd);
         if (gameEnd)
         {
+            Debug.Log("game over");
             GameOver();
         }
     }
@@ -31,27 +35,38 @@ public class GameOverMenu : MonoBehaviour
         TextMeshProUGUI gameOverText = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
         //load game over screen
-        if (FindObjectOfType<GameManage>()._playerHealth <= 0)
+        if (gameManageScript._playerHealth <= 0)
         {
+            Debug.Log(gameManageScript._playerHealth);
             gameOverText.text = "GAME OVER";
         }
-        else if (FindObjectOfType<GameManage>().timeRemaining <= 0)
+        else if (gameManageScript.timeRemaining <= 0)
         {
+            Debug.Log("out of time");
             gameOverText.text = "TIME'S UP";
         }
-        scoreText.text = "Score: " + FindObjectOfType<GameManage>()._playerScore.ToString();
-        Debug.Log("Score: " + FindObjectOfType<GameManage>()._playerScore.ToString());
+        scoreText.text = "Score: " + gameManageScript._playerScore.ToString();
+        Debug.Log("Score: " + gameManageScript._playerScore.ToString());
     }
-
 
     public void backToMain()
     {
-        SceneManager.LoadScene("MainMenu");
+        ResetGame();
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void Restart()
     {
+        ResetGame();
         SceneManager.LoadScene("SampleScene");
-        FindObjectOfType<GameManage>().timeRemaining = initialTime;
+    }
+
+    public void ResetGame()
+    {
+        gameEnd = false;
+        gameManageScript.timeRemaining = gameManageScript.initialTime;
+        gameManageScript._playerHealth = gameManageScript.initialHealth;
+        gameManageScript._playerScore = 0;
+        Destroy(gameManager);
     }
 }

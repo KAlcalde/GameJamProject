@@ -3435,6 +3435,11 @@ PrefabInstance:
       propertyPath: _playerSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2894130249043476099, guid: 74b3a14785c7744889834f7dc85dcb88,
+        type: 3}
+      propertyPath: _playerHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3065591004475498632, guid: 74b3a14785c7744889834f7dc85dcb88,
         type: 3}
       propertyPath: m_Materials.Array.data[1]

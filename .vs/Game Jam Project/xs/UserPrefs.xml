@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{A158C06A-1DAA-FDF1-BE3D-9277D32F10A9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StoreScore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManage.cs">
     <Files>
+      <File FileName="Assets/Scripts/OutOfBoundsDestroy.cs" Line="29" Column="54" />
+      <File FileName="Assets/Scripts/ScoreUI.cs" Line="17" Column="99" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/BulletController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/scripts_menus/MainMenu.cs" Line="9" Column="35" />
-      <File FileName="Assets/Scripts/scripts_enemy/EnemySpawn_temp.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/OutOfBoundsDestroy.cs" Line="35" Column="56" />
-      <File FileName="Assets/Scripts/PlayerHit.cs" Line="8" Column="11" />
-      <File FileName="Assets/Scripts/GameTimer.cs" Line="36" Column="53" />
-      <File FileName="Assets/Scripts/HealthUI.cs" Line="17" Column="37" />
-      <File FileName="Assets/Scripts/scripts_menus/GameOverMenu.cs" Line="33" Column="123" />
-      <File FileName="Assets/Scripts/ScoreUI.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="11" Column="5" />
-      <File FileName="Assets/Scripts/StoreScore.cs" Line="12" Column="10" />
+      <File FileName="Assets/Scripts/scripts_menus/GameOverMenu.cs" Line="23" Column="10" />
+      <File FileName="Assets/Scripts/GameTimer.cs" Line="51" Column="1" />
+      <File FileName="Assets/Scripts/GameManage.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +18,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="scripts_enemy" expanded="True" />
                 <Node name="scripts_menus" expanded="True" />
-                <Node name="StoreScore.cs" selected="True" />
+                <Node name="GameManage.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,7 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c40cfc31-16ef-4d0b-bc5e-e8ef6aa6ab31" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="510b9151-e1e2-481b-9769-f9d9fbae5b3a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
