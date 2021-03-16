@@ -346,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481129275}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
-  m_LocalPosition: {x: -120, y: 0, z: 0}
+  m_LocalPosition: {x: -100, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 202036191}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481129275}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ce78108056149cfa895719bbc9c63e, type: 3}
   m_Name: 
@@ -507,6 +507,14 @@ MonoBehaviour:
   enemy: {fileID: 730075449}
   spawnPos: {x: 0, y: 0, z: 0}
   spawnRot: {x: 0, y: 0, z: 0, w: 0}
+  boundaryN: {fileID: 0}
+  boundaryS: {fileID: 0}
+  boundaryW: {fileID: 0}
+  boundaryE: {fileID: 0}
+  boundXMin: 0
+  boundXMax: 0
+  boundYMin: 0
+  boundYMax: 0
 --- !u!4 &544094039
 Transform:
   m_ObjectHideFlags: 0
@@ -754,7 +762,7 @@ Transform:
   m_GameObject: {fileID: 792375601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 1, z: 25}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1474,7 +1482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492449463}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 120, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 202036191}
@@ -1548,7 +1556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492449463}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ce78108056149cfa895719bbc9c63e, type: 3}
   m_Name: 
@@ -1581,7 +1589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618444128}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 120}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 202036191}
@@ -1655,7 +1663,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618444128}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46ce78108056149cfa895719bbc9c63e, type: 3}
   m_Name: 
@@ -1811,7 +1819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692865713}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -120}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 202036191}
@@ -1943,7 +1951,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2037,6 +2045,14 @@ MonoBehaviour:
   enemy: {fileID: 76520309}
   spawnPos: {x: 0, y: 0, z: 0}
   spawnRot: {x: 0, y: 0, z: 0, w: 0}
+  boundaryN: {fileID: 0}
+  boundaryS: {fileID: 0}
+  boundaryW: {fileID: 0}
+  boundaryE: {fileID: 0}
+  boundXMin: 0
+  boundXMax: 0
+  boundYMin: 0
+  boundYMax: 0
 --- !u!1 &1994725036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,12 +2508,12 @@ PrefabInstance:
     - target: {fileID: 6649498303028424547, guid: 280d0f2c570f242e28f4249c6240f06d,
         type: 3}
       propertyPath: speed
-      value: 3.57
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6649498303028424547, guid: 280d0f2c570f242e28f4249c6240f06d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280d0f2c570f242e28f4249c6240f06d, type: 3}

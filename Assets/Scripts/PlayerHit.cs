@@ -18,15 +18,12 @@ public class PlayerHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("player health = " + _playerHealth);
+        //Debug.Log("player health = " + _playerHealth);
         if (_playerHealth <= 0)
         {
             //game over
             Debug.Log("game over");
             SceneManager.LoadScene("GameOverMenu");
-            //FindObjectOfType<MainMenu>().GameOver();
-            //GameObject.Find("MainMenu").SetActive(false);
-            //GameObject.Find("GameOverMenu").SetActive(true);
         }
     }
 

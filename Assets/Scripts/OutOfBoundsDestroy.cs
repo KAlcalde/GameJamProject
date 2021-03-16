@@ -32,7 +32,7 @@ public class OutOfBoundsDestroy : MonoBehaviour
         {
             other.gameObject.SetActive(false);
         }
-        Debug.Log("Collided with " + other.gameObject);
+        //Debug.Log("Collided with " + other.gameObject);
         
     }
 }
