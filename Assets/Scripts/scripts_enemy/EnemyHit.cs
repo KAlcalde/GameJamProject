@@ -6,15 +6,11 @@ public class EnemyHit : MonoBehaviour
 {
     public int enemyHealth = 1;
     public GameObject EnemyRespawn;
-    public GameObject explosion;
-    public Explosion explosionEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         EnemyRespawn = GameObject.Find("EnemyRespawn");
-        explosion = GameObject.Find("Explosion");
-        explosionEffect = explosion.GetComponent<Explosion>();
     }
 
     // Update is called once per frame
@@ -24,8 +20,6 @@ public class EnemyHit : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        
-        
         if(other.gameObject.tag == "playerBullet")
         {
             enemyHealth--;
@@ -33,8 +27,6 @@ public class EnemyHit : MonoBehaviour
         }
         if (enemyHealth <= 0)
         {
-            explosionEffect.Explode();
-
             this.gameObject.SetActive(false);
         }
     }
