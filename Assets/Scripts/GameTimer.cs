@@ -46,7 +46,7 @@ public class GameTimer : MonoBehaviour
         timeToDisplay += 1f;
 
         float minutes = Mathf.FloorToInt(timeRemaining / 60);
-        float seconds = Mathf.FloorToInt((timeRemaining % 60)+1);
+        float seconds = Mathf.FloorToInt((timeRemaining % 60));
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }

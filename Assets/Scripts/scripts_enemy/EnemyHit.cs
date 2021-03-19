@@ -28,6 +28,7 @@ public class EnemyHit : MonoBehaviour
         if (enemyHealth <= 0)
         {
             this.gameObject.SetActive(false);
+            enemyHealth++;
         }
     }
 }
